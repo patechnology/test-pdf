@@ -1,0 +1,314 @@
+.loader{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.97);
+}
+.loader:before{
+  content: '';
+  width: 80px;
+  height: 80px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -40px;
+  border: 10px solid red;
+  border-radius: 50%;
+  border-top: 15px solid #DE117B;
+  border-left: 15px solid #DE117B;
+  border-right: 15px solid #3BB3C3;
+  border-bottom: 15px solid #3BB3C3;
+  animation: loader 1s linear infinite; 
+}
+@keyframes loader{
+  from{transform: rotate(0)}
+  to{transform: rotate(360deg)}
+}
+
+
+
+.l{box-shadow: 0 0 5px red;}
+
+.container{
+  width: 100%;
+  max-width: 1230px;
+}
+
+#test_Name{color: #DE117B; font-size: 44px;}
+
+
+
+
+
+
+
+
+.btn-rounded {
+    -webkit-border-radius: 10em;
+    border-radius: 10em;
+}
+.btn.btn-md {
+  padding: .7rem 1.6rem .55rem 1.6rem;
+  font-size: .9rem;
+}
+.min-h60{min-height:60px;}
+
+.card .card-body .card-text-1rem{
+  font-size: 1rem;
+}
+
+.btn-not{cursor: default;}
+
+.table-head td{font-size: 16px; color: #222; vertical-align: middle;}
+.table-head th{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+.guage-box{
+	display: inline-block;
+	width: 100%;
+	max-width: 38px;
+	text-align: center;
+}
+.circle-bg {
+  fill: none;
+  stroke: #e9ecef;
+  stroke-width: 4;
+}
+.guage-circle {
+  fill: none;
+  stroke-width: 4;
+  stroke: #00bcd4;
+  transition: all 1s ease-out;
+}
+.guage-percentage {
+  fill: #333;
+  font-size: 0.85em;
+  text-align: center;
+  text-anchor: middle;
+}
+
+.bg-gray{
+	background: #f7f7f7;
+}
+
+table.table-hover tbody tr:hover{
+  background-color: rgba(0,0,0,.035);
+}
+table.table-hover-pointer tbody tr:hover{cursor: pointer;}
+table.table-hover-pointer tbody tr:active{ background-color: rgba(0,0,0,.195);}
+
+.modal-backdrop.show{opacity:.75;}
+
+
+
+
+
+.issue-msg {
+  word-wrap: break-word;
+  width: 90%px;
+}
+
+.issue-occurrence {
+  /*width: 100px;*/
+}
+
+.badge-w64{min-width: 64px; display: inline-block;}
+
+.table-text14 td{
+  font-size: 14px;
+}
+
+.icon{
+  stroke: unset;
+  stroke-width: 0px;
+  transition: inherit;
+  fill: currentColor;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.1em;
+}
+.icon-cardbox{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 30px;
+  box-shadow: 0px 2px 8px #888;
+}
+.icon-cardbox-bug{
+  background: #0db1c6;
+}
+.icon-cardbox-cs{
+  background: #fd9b1a
+}
+.icon-cardbox-cv{background: #58b05c}
+.icon-cardbox-bv{background: #e2306d}
+.icon-cardbox-complex{background: #12778c}
+
+.bg-yellow{background-color: #ffeeba;}
+
+.card-yellow{
+  border: 1px solid rgb(232, 211, 146);
+  background-color: rgba(232, 211, 146, 0.1);
+}
+
+.text-theme{
+  color: #3D909E
+}
+
+.font-80p{font-size: 80%;}
+.lspacing-1{letter-spacing: 1px}
+
+
+/*Start => Custom bar graph design*/
+.bargraph-box{
+  position: relative;
+  background: #f8f9fa;
+  min-height: 196px;
+  padding-left: 60px;
+  padding-bottom: 30px;
+  width: 100%;
+  max-width: 360px;
+  display:flex;
+  flex-direction:row;
+  border-radius: 4px;
+  margin: 0px auto;
+}
+.bargraph-box:before{
+  content: attr(data-labelleft);
+  border-right: 1px solid #ccc;
+  position: absolute;
+  width: 30px;
+  line-height: 30px;
+  height: 100%;
+  text-align: center;
+  text-orientation : sideways;
+  writing-mode: vertical-lr;
+  left: 30px;
+  top: 0;
+  margin: 0;
+  font-weight: bold;
+  z-index: 2;
+}
+.bargraph-box:after{
+  content: attr(data-labelbottom);
+  border-top: 1px solid #ccc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 44px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.bargraph-box div{
+  text-align:center;
+  position: relative;
+  max-width: 50px;
+  flex:1 1 auto;
+  text-align: center;
+  margin-right: 4px;
+}
+.bargraph-box div span{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 1px;
+  background: #ccc;
+  transition: 200ms;
+}
+.bargraph-box div:hover span{
+  background: #3BB3C3;
+}
+.bargraph-box div:hover span:before{
+  content: attr(data-pointsname);
+  position: absolute;
+  background: #DE117B;
+  color: #fff;
+  white-space: nowrap;
+  top: -20px;
+  font-size: 13px;
+  padding: 2px 10px 4px 10px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: none;
+  z-index: 3;
+}
+.bargraph-box div span:after{
+  content: attr(data-userid);
+  font-size: 11px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  width: 100%;
+  bottom: -17px;
+  color: #888;
+}
+
+
+.bargraph-box p{
+  width: 30px;
+  height: 100%;
+  height: calc(100% - 30px);
+  position: absolute;
+  background: #fff;
+  margin: 0;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.bargraph-box p strong:after{
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: #ddd;
+  left: 0;
+  display: block;
+}
+.bargraph-box p strong{position: absolute; font-size: 10px; text-indent: 3px; line-height: 11px; color: #888}
+.bargraph-box p strong:nth-child(1){
+  bottom: 0%;
+}
+.bargraph-box p strong:nth-child(2){
+  bottom: 12%;
+}
+.bargraph-box p strong:nth-child(3){
+  bottom: 24%;
+}
+.bargraph-box p strong:nth-child(4){
+  bottom: 36%;
+}
+.bargraph-box p strong:nth-child(5){
+  bottom: 48%;
+}
+.bargraph-box p strong:nth-child(6){
+  bottom: 60%;
+}
+.bargraph-box p strong:nth-child(7){
+  bottom: 72%;
+}
+
+.submission-type {
+  font-size: 30px;
+  margin-left: 2px;
+}
+
+/*End => Custom bar graph design*/
